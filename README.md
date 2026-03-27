@@ -1,6 +1,7 @@
 # Vath-Looker
 
-Vath Observer watches a project folder, records short notes, and writes compact change summaries into files beside the project.
+Vath Observer watches a project folder and writes and records short notes, human-readable change notes for coding work.
+It is built to stay low-CPU while idle, capture file changes clearly, and help with commit messages, context bundles, and quick project reports.
 
 ## Commands
 
