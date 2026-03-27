@@ -1,7 +1,6 @@
 # Vath-Looker
 
-Vath Observer watches a project folder and writes and records short notes, human-readable change notes for coding work.
-It is built to stay low-CPU while idle, capture file changes clearly, and help with commit messages, context bundles, and quick project reports.
+Vath Observer watches a project folder and writes short, human-readable change summaries for coding work. It is built to stay low-CPU while idle, capture file changes clearly, and help with commit messages, context bundles, project trees, and quick project reports.
 
 ## Commands
 
@@ -10,7 +9,8 @@ It is built to stay low-CPU while idle, capture file changes clearly, and help w
 - `vath stop` stops the observer.
 - `vath note "refactoring the database connection"` records a short note in `vath_journal.txt`.
 - `vath context --last 10m` builds a Markdown context bundle and copies it to the clipboard when possible.
-- `vath structure --style visual` prints the project tree.
+- `vath structure --style visual` prints a clean tree view.
+- `vath structure --style directory` prints a tree with short folder and file descriptions.
 - `vath report commit` drafts a commit message from recent journal and file changes.
 - `vath publish` runs a git preset from `git_config.json`.
 - `vath status` shows whether the observer is running and which folder it is watching.
@@ -20,12 +20,11 @@ It is built to stay low-CPU while idle, capture file changes clearly, and help w
 
 The observer keeps its main files beside the folder you are observing:
 
-- `.vath/vath_config.json`
-- `.vath/vath_journal.txt`
-- `.vath/vath_state.json`
-- `.vath/git_config.json`
-- `.vath/vath.pid`
-
+- `D:\Vath\.vath\vath_config.json`
+- `D:\Vath\.vath\vath_journal.txt`
+- `D:\Vath\.vath\vath_state.json`
+- `D:\Vath\.vath\git_config.json`
+- `D:\Vath\.vath\vath.pid`
 
 The config stores the project root and setup preferences. The journal stores concise human-readable summaries plus structured details for each batch. The state file stores low-CPU tracking data for the hybrid watcher. The git config stores optional batch command presets.
 
@@ -63,4 +62,5 @@ vath publish
 - Clipboard support is best-effort. If it cannot access the clipboard, the context bundle is still printed to the terminal.
 - Shell aliases are opt-in and can be written for PowerShell, Bash, or Zsh.
 - Git presets are opt-in and stored in `git_config.json`.
+- Need more help or want to explore commands? Run `vath --help` or `vath <command> --help`.
 
