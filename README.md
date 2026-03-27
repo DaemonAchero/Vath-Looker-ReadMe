@@ -1,5 +1,8 @@
 # Vath-Looker
 
+![PyPI - Version](https://img.shields.io/pypi/v/vath-observer)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/vath-observer)
+
 Vath Observer watches a project folder and writes short, human-readable change summaries for coding work. It is built to stay low-CPU while idle, capture file changes clearly, and help with commit messages, context bundles, project trees, and quick project reports.
 
 ## Commands
