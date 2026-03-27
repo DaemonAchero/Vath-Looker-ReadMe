@@ -20,11 +20,12 @@ It is built to stay low-CPU while idle, capture file changes clearly, and help w
 
 The observer keeps its main files beside the folder you are observing:
 
-- `D:\Vath\.vath\vath_config.json`
-- `D:\Vath\.vath\vath_journal.txt`
-- `D:\Vath\.vath\vath_state.json`
-- `D:\Vath\.vath\git_config.json`
-- `D:\Vath\.vath\vath.pid`
+- `.vath/vath_config.json`
+- `.vath/vath_journal.txt`
+- `.vath/vath_state.json`
+- `.vath/git_config.json`
+- `.vath/vath.pid`
+
 
 The config stores the project root and setup preferences. The journal stores concise human-readable summaries plus structured details for each batch. The state file stores low-CPU tracking data for the hybrid watcher. The git config stores optional batch command presets.
 
